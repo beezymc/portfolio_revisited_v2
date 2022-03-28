@@ -18,11 +18,11 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <>
       <BlogHeader />
-      <Box sx={{ backgroundColor: '#303030', height: '100%', width: '100%', zIndex: '-1', paddingTop: '2%' }}>
+      <Box sx={{ backgroundColor: '#90CAF9', height: '100%', width: '100%', zIndex: '-1', paddingTop: '2%', paddingBottom: '3%' }}>
         <Container maxWidth='md' id='blog' sx={{ marginTop: '3%', padding: '4% 4% 4%', paddingBottom: '1%',borderRadius: '5px', backgroundColor: '#424242', color: '#fff' }}>
           <Box>
             <Typography variant='h5' sx={{ textAlign: 'center', fontWeight: '900', paddingBottom: '2%' }}>
-              <Box component='span' sx={{ borderBottom: '2px solid rgba(209, 117, 5, 0.5)' }}>{post.frontmatter.title}</Box>
+              <Box component='span' sx={{ borderBottom: '2px solid rgba(247, 106, 243, .5)' }}>{post.frontmatter.title}</Box>
             </Typography>
             <Box sx={{ textAlign: 'center', paddingBottom: '2%' }}>
               {post.frontmatter.date}
@@ -34,7 +34,7 @@ const BlogPostTemplate = ({ data }) => {
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '4%', marginTop: '4%' }}>
-            <Button href='/blog' variant='outlined' color='error'>
+            <Button href='/blog' variant='outlined' color='primary'>
               View More Posts
             </Button>
           </Box>

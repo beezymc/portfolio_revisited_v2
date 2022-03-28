@@ -11,7 +11,6 @@ export default function Footer() {
           <Box sx={{ justifyContent: 'center', display: 'flex' }}>
             <Social direction="row" />
           </Box>
-          <span>Copyright © 2022 David Rajec</span>
         </Box>
       </Container>
     </Box>

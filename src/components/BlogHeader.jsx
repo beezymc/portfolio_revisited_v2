@@ -14,7 +14,7 @@ const Header = () => {
       <Container maxWidth='md'>
         <ToolBar disableGutters>
           <Avatar sx={{ marginRight: 'auto', color: '#fff', backgroundColor: 'black', borderRadius: 0, height: 30, border: '2px solid gray', width: 80, borderLeft: '12px solid transparent', borderRight: '12px solid transparent' }}>
-            <Link sx={{ color: '#fff', textDecoration: 'none', '&:hover': { color: '#d17505' } }} href='/'>
+            <Link sx={{ color: '#fff', textDecoration: 'none', '&:hover': { color: '#90CAF9' } }} href='/'>
               {"<D />"}
             </Link>
           </Avatar>
@@ -23,7 +23,7 @@ const Header = () => {
               David Rajec's Blog
             </Typography>
           </Box>
-          <Button sx={{ marginRight: '20px' }} href='mailto:david.rajec@gmail.com' variant='outlined' color='error'>
+          <Button sx={{ marginRight: '20px' }} href='mailto:david.rajec@gmail.com' variant='outlined' color='primary'>
             Get in Touch!
           </Button>
         </ToolBar>

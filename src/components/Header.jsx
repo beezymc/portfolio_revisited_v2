@@ -27,13 +27,13 @@ const Header = () => {
       <Container maxWidth='md'>
         <ToolBar disableGutters>
           <Avatar sx={{ marginRight: 'auto', color: '#fff', backgroundColor: 'black', borderRadius: 0, height: 30, border: '2px solid gray', width: 80, borderLeft: '12px solid transparent', borderRight: '12px solid transparent' }}>
-            <Link href='#home' sx={{ color: '#fff', textDecoration: 'none', '&:hover': { color: '#d17505' } }}>
+            <Link href='#home' sx={{ color: '#fff', textDecoration: 'none', '&:hover': { color: '#90CAF9' } }}>
               {"<D />"}
             </Link>
           </Avatar>
             {navigationLinks.map((item, index) => (
               <Link
-                sx={{ display: { xs: 'none', md: 'block' }, color: '#fff', marginRight: '20px', '&:hover': { color: '#d17505' } }}
+                sx={{ display: { xs: 'none', md: 'block' }, color: '#fff', marginRight: '20px', '&:hover': { color: '#90CAF9' } }}
                 color='textPrimary'
                 variant='button'
                 underline='none'
@@ -43,7 +43,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button sx={{ display: { xs: 'none', md: 'block' }, marginRight: '20px' }} href='/David Rajec Resume.pdf' variant='outlined' color='error'>
+            <Button sx={{ display: { xs: 'none', md: 'block' }, marginRight: '20px' }} href='/David Rajec Resume.pdf' variant='outlined' color='primary' target="_blank">
               Resume
             </Button>
           <IconButton onClick={() => setOpen(true)} sx={{ display: { xs: 'block', md: 'none' }, "&:hover, &.Mui-focusVisible": { backgroundColor: "rgba(255, 255, 255, .3)" }}}>
@@ -72,7 +72,7 @@ const Header = () => {
             </ListItem>
           ))}
           <ListItem>
-            <Button href={Resume} variant='outlined' color='error'>
+            <Button href={Resume} target="_blank" variant='outlined' color='primary'>
               Resume
             </Button>
           </ListItem>

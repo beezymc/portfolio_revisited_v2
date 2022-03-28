@@ -20,11 +20,11 @@ import sayWhen from '../images/SayWhen.png';
 const Project = ({ title, description, imageUrl, tags, links }) => {
   return (
     <Grid item>
-      <Card sx={{ display: 'flex', boxShadow: '2px 2px 2px rgba(209, 117, 5, 0.5)', color: '#fff', backgroundColor: '#424242' }}>
+      <Card sx={{ display: 'flex', boxShadow: '2px 2px 2px rgba(247, 106, 243, 0.5)', color: '#fff', backgroundColor: '#424242' }}>
         <div>
           <CardContent>
             <Typography variant='h5' paragraph>
-              <Box component='span' sx={{ borderBottom: '2px solid rgba(209, 117, 5, 0.5)' }}>{title}</Box>
+              <Box component='span' sx={{ borderBottom: '2px solid rgba(247, 106, 243, 0.5)' }}>{title}</Box>
             </Typography>
             <Typography variant='subtitle1' paragraph>
               {description}
@@ -60,7 +60,7 @@ const Project = ({ title, description, imageUrl, tags, links }) => {
             </Box>
           </CardActions>
         </div>
-        <CardMedia component='img' image={imageUrl} sx={{ display: { xs: 'none', md: 'block'}, width: '180px'}}>
+        <CardMedia component='img' image={imageUrl} sx={{ display: { xs: 'none', md: 'block'}, width: '150px'}}>
         </CardMedia>
       </Card>
     </Grid>
@@ -90,20 +90,20 @@ const projectsData = [
   {
     title: "This Portfolio",
     description:
-      "This is the portfolio you're on! Features of this portfolio include: header, hero section, about me, projects, footer, blog, and blog posts (using markdown files). The portfolio is fully responsive, using material-ui's Hidden component to tactfully show/hide/transform certain features at different screen sizes.",
+      "This is the portfolio you're on! Features of this portfolio include: header, hero section, about me, projects, footer, blog, and blog posts.",
     imageUrl: portfolio,
     tags: ["React", "Material UI", "Gatsby.js", "AWS S3"],
     links: [
       {
         icon: GithubIcon,
-        href: "https://github.com/beezymc/portfolio_revisited",
+        href: "https://github.com/beezymc/portfolio_revisited_v2",
       }
     ],
   },
   {
     title: "Ratings and Reviews",
     description:
-      "This project involved scaling a backend API endpoint for a shopping web application. This required a few steps: ETL of previously-stored data into a new Postgres database, developing a REDIS store, creating a server with efficient queries to that database/REDIS store, deploying the server (with REDIS cache, using docker and docker-compose) and database to AWS EC2, scaling the server to multiple EC2 instances, and introducing a new EC2 instance with an nginx load balancer. See the github readme for additional details.",
+      "This project involved scaling a backend API endpoint for a shopping web application. The following was required: ETL of previously-stored data into a new database, developing a cache, creating a server with efficient queries, deploying the server and database, scaling the server to multiple instances, and introducing a load balancer.",
     imageUrl: ratingsReviews,
     tags: ["Node", "Express", "PostgreSQL", "Nginx", "REDIS", "Docker", "NewRelic", "AWS EC2/Cloudwatch"],
     links: [
@@ -116,7 +116,7 @@ const projectsData = [
   {
     title: "Catwalk",
     description:
-      "In this project, two engineers and I built the product view page of a shopping web application. Features I implemented include: client-side routing using React-Router, maintaining global state with Redux, the creation of a related items carousel component, the development of an outfits carousel component, and deployment via AWS EC2 and Docker.",
+      "In this project, two colleagues and I built the product view page of a shopping app. Features I implemented include: client-side routing, global state management, the creation of related items and outfits carousel components, and deployment.",
     imageUrl: catwalk,
     tags: ["Node", "Express", "React", "React-Router", "Redux", "CSS3", "HTML5", "Docker", "AWS EC2"],
     links: [
@@ -133,7 +133,7 @@ const projectsData = [
   {
     title: "SayWhen!",
     description:
-      "This is a 2-day project in which I created an app that allows a user to create a weekly availability calendar and share that calendar with others, who can then schedule activities using that availability as a reference. It makes use of unique ids to generate a unique availability page every time a calendar is created.",
+      "This is a 2-day project in which I created an app that allows a user to create a weekly availability calendar and share that calendar with others, who can then schedule activities using that availability as a reference.",
     imageUrl: sayWhen,
     tags: ["Node", "PostgreSQL", "Prisma", "Next.js", "Material UI", "Vercel"],
     links: [

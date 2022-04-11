@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { Helmet } from 'react-helmet';
 
 const headerImageStyles = {
   height: '100%',
@@ -17,6 +18,16 @@ const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
   return (
     <>
+      <Helmet>
+        <title>David Rajec's Blog</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-224074954-1"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-224074954-1');`}
+        </script>
+      </Helmet>
       <BlogHeader />
       <Box sx={{ backgroundColor: '#90CAF9', height: '100%', width: '100%', zIndex: '-1', paddingTop: '2%', paddingBottom: '3%' }}>
         <Container maxWidth='md' id='blog' sx={{ marginTop: '3%', padding: '4% 4% 4%', paddingBottom: '1%',borderRadius: '5px', backgroundColor: '#424242', color: '#fff' }}>
@@ -34,7 +45,7 @@ const BlogPostTemplate = ({ data }) => {
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '4%', marginTop: '4%' }}>
-            <Button href='/blog' variant='outlined' color='primary'>
+            <Button href='/#blog' variant='outlined' color='primary'>
               View More Posts
             </Button>
           </Box>

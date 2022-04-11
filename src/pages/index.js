@@ -4,9 +4,12 @@ import Header from '../components/Header.jsx';
 import Projects from '../components/Projects.jsx';
 import About from '../components/About.jsx';
 import Footer from '../components/Footer.jsx';
+import Blog from '../components/Blog.jsx';
 import { Helmet } from 'react-helmet';
+import { graphql } from "gatsby"
 
-export default function Index() {
+export default function Index({ data }) {
+  const posts = data.allMarkdownRemark.nodes;
   return (
     <>
       <Helmet>
@@ -23,7 +26,31 @@ export default function Index() {
       <HeroSection />
       <About />
       <Projects />
+      <Blog posts={posts} />
       <Footer />
     </>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+`

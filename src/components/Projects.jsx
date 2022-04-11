@@ -69,7 +69,7 @@ const Project = ({ title, description, imageUrl, tags, links }) => {
 
 const Projects = () => {
   return (
-    <Box sx={{ backgroundColor: '#303030', color: '#fff', width: '100vw', }}>
+    <Box sx={{ backgroundColor: '#303030', color: '#fff', width: '100vw', paddingBottom: '5%' }}>
       <Container maxWidth='md' id='projects' >
         <Box pt={8} mb={2}>
           <Typography variant='h4'>Projects</Typography>

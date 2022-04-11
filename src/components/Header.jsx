@@ -43,7 +43,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button sx={{ display: { xs: 'none', md: 'block' }, marginRight: '20px' }} href='/David Rajec Resume.pdf' variant='outlined' color='primary' target="_blank">
+            <Button sx={{ display: { xs: 'none', md: 'block' }, marginRight: '20px' }} href={Resume} variant='outlined' color='primary' target="_blank">
               Resume
             </Button>
           <IconButton onClick={() => setOpen(true)} sx={{ display: { xs: 'block', md: 'none' }, "&:hover, &.Mui-focusVisible": { backgroundColor: "rgba(255, 255, 255, .3)" }}}>
